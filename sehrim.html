@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şehrim: Adana | Mehmet Mustafa Doğan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Üst Menü (Navbar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">MMD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sehrim.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgialanlari.html">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning fw-bold" href="login.html">Giriş Yap</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Şehrim Ana İçeriği -->
+    <main class="container mt-4 mb-5">
+        
+        <header class="text-center mb-4">
+            <h1 class="display-4 fw-bold text-dark">Güneyin İncisi: Adana</h1>
+            <p class="lead text-muted">Tarihi, doğası ve eşsiz lezzetleriyle memleketim.</p>
+        </header>
+
+        <!-- MERKEZ PARK EKLENMİŞ 5'Lİ SLIDER -->
+        <section class="mb-5 shadow-lg rounded overflow-hidden">
+            <div id="adanaSlider" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- Alt Göstergeler (5 Adet) -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#adanaSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#adanaSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#adanaSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#adanaSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#adanaSlider" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                    <!-- Resim 1 -->
+                    <div class="carousel-item active">
+                        <!-- KENDİ RESMİNİ EKLEMEK İÇİN src KISMINI DEĞİŞTİR: src="resimler/sabanci.jpg" -->
+                        <img src="https://images.unsplash.com/photo-1596395827376-74ba3779e2c6?q=80&w=1200&auto=format&fit=crop" class="d-block w-100" alt="Sabancı Merkez Camii">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Sabancı Merkez Camii & Seyhan Nehri</h5>
+                        </div>
+                    </div>
+                    <!-- Resim 2 -->
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x500/343a40/FFFFFF/png?text=Taskopru+Resmini+Buraya+Ekle" class="d-block w-100" alt="Taşköprü">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Tarihi Taşköprü</h5>
+                        </div>
+                    </div>
+                    <!-- Resim 3 -->
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x500/343a40/FFFFFF/png?text=Buyuk+Saat+Resmini+Buraya+Ekle" class="d-block w-100" alt="Büyüksaat">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Büyük Saat Kulesi</h5>
+                        </div>
+                    </div>
+                    <!-- Resim 4 -->
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x500/343a40/FFFFFF/png?text=Varda+Koprusu+Resmini+Buraya+Ekle" class="d-block w-100" alt="Varda Köprüsü">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Varda (Alman) Köprüsü</h5>
+                        </div>
+                    </div>
+                    <!-- Resim 5 (YENİ EKLENEN MERKEZ PARK) -->
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x500/198754/FFFFFF/png?text=Merkez+Park+Resmini+Buraya+Ekle" class="d-block w-100" alt="Merkez Park">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Merkez Park</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#adanaSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Önceki</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#adanaSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Sonraki</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Tarihçe ve Nüfus -->
+        <section class="row align-items-center bg-white p-5 rounded shadow-sm mb-5 border-top border-4 border-primary">
+            <div class="col-12">
+                <h2 class="text-primary border-bottom pb-2 mb-4">Tarihçe Nüfus & Genel Bilgiler</h2>
+                <article class="row">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <h5 class="fw-bold text-dark">⏳ Köklü Bir Geçmiş</h5>
+                        <p class="text-muted">Adana'nın tarihi günümüzden yaklaşık 3.000 yıl öncesine, Hititler dönemine kadar uzanmaktadır. Çukurova'nın bereketli toprakları tarih boyunca Romalılar, Bizanslılar, Ermeni Krallıkları, Osmanlı İmparatorluğu gibi birçok medeniyete ev sahipliği yapmış, her birinden eşsiz mimari miraslar ve mutfak kültürü ile beraber çok dilli ve çok inançlı bir mozaik devralmıştır.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="fw-bold text-dark">👥 Nüfus Dinamiği</h5>
+                        <p class="text-muted">Günümüzde 2.2 milyonu aşan nüfusuyla Türkiye'nin en kalabalık 6. şehridir. Kozmopolit yapısı, sıcakkanlı insanları ve tarım/sanayi eksenli gelişmiş ekonomisiyle bölgenin en hareketli metropollerinden biri konumundadır.</p>
+                    </div>
+                   
+                </article>
+            </div>
+        </section>
+
+        <!-- Gezilecek Yerler -->
+        <section class="mb-5">
+            <h2 class="text-center text-primary mb-4 border-bottom pb-2 d-inline-block w-100">Gezilecek Simgesel Yerler</h2>
+            <div class="row g-4">
+                
+                <article class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://placehold.co/800x600/dee2e6/6c757d/png?text=Resim+Ekle" class="card-img-top" alt="Taşköprü" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Taşköprü</h5>
+                            <p class="card-text text-muted small">Seyhan Nehri üzerinde yer alan ve Roma İmparatorluğu döneminden günümüze ulaşan tarihi köprüdür.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://placehold.co/800x600/dee2e6/6c757d/png?text=Resim+Ekle" class="card-img-top" alt="Bebekli Kilise" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Bebekli Kilise</h5>
+                            <p class="card-text text-muted small">Tepesindeki Meryem Ana heykelinin bebeğe benzetilmesi sebebiyle halk arasında bu isimle anılan tarihi Aziz Pavlus Kilisesi.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://images.unsplash.com/photo-1596395827376-74ba3779e2c6?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Sabancı Merkez Camii" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sabancı Merkez Camii</h5>
+                            <p class="card-text text-muted small">Seyhan Nehri'nin kıyısında, 6 minaresiyle Ortadoğu'nun en büyük camilerinden biridir.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://placehold.co/800x600/dee2e6/6c757d/png?text=Resim+Ekle" class="card-img-top" alt="Ulu Camii" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Ulu Camii</h5>
+                            <p class="card-text text-muted small">Ramazanoğulları döneminde inşa edilen, siyah-beyaz mermer işçiliğine sahip şaheser.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
