@@ -8,68 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            background-color: #f8f9fa; 
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        .login-wrapper {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .card {
-            border: none;
-            border-radius: 20px;
-            overflow: hidden;
-            width: 100%;
-            max-width: 400px;
-        }
-        .login-header {
-            background: #212529;
-            color: white;
-            padding: 35px;
-            text-align: center;
-        }
-        .login-header h2 {
-            font-weight: 600;
-            margin-bottom: 5px;
-            letter-spacing: 1px;
-        }
-        .btn-login {
-            background-color: #212529;
-            color: white;
-            font-weight: 600;
-            padding: 12px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            border: none;
-        }
-        .btn-login:hover {
-            background-color: #343a40;
-            color: #ffc107;
-            transform: translateY(-2px);
-        }
-        .form-control {
-            border-radius: 10px;
-            padding: 12px;
-            background-color: #f1f3f5;
-            border: 1px solid #e9ecef;
-        }
-        .form-control:focus {
-            box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.1);
-            border-color: #212529;
-            background-color: #fff;
-        }
-        .status-msg {
-            font-size: 0.85rem;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
+        body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; min-height: 100vh; display: flex; flex-direction: column; }
+        .login-wrapper { flex: 1; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .card { border: none; border-radius: 20px; overflow: hidden; width: 100%; max-width: 400px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .login-header { background: #212529; color: white; padding: 35px; text-align: center; }
+        .btn-login { background-color: #212529; color: white; font-weight: 600; padding: 12px; border-radius: 10px; transition: all 0.3s ease; border: none; }
+        .btn-login:hover { background-color: #343a40; color: #ffc107; transform: translateY(-2px); }
+        .form-control { border-radius: 10px; padding: 12px; background-color: #f1f3f5; border: 1px solid #e9ecef; }
     </style>
 </head>
 <body>
@@ -77,17 +22,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">MMD</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ilgialanlari.html">İlgi Alanlarım</a></li>
-                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link active text-warning fw-bold" href="login.html">Giriş Yap</a></li>
                 </ul>
             </div>
@@ -95,24 +31,24 @@
     </nav>
 
     <div class="login-wrapper">
-        <div class="card shadow-2xl">
+        <div class="card">
             <div class="login-header">
-                <h2>Öğrenci Girişi</h2>
+                <h2 class="fw-bold mb-1">Öğrenci Girişi</h2>
                 <p class="small text-secondary mb-0">Sakarya Üniversitesi | Bilgi Sistemi</p>
             </div>
             <div class="card-body p-4 p-md-5">
-                <form id="loginForm">
+                <form id="loginForm" action="login.php" method="POST">
                     <div class="mb-4">
                         <label for="email" class="form-label fw-bold small text-dark">E-POSTA ADRESİ</label>
-                        <input type="email" class="form-control" id="email" placeholder="isim.soyisim.ogr@sakarya.edu.tr" required>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="b2412100001@sakarya.edu.tr">
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label fw-bold small text-dark">ŞİFRE</label>
-                        <input type="password" class="form-control" id="password" placeholder="••••••••" required>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Öğrenci Numaranız">
                     </div>
                     <button type="submit" class="btn btn-login w-100 shadow-sm">Giriş Yap</button>
                     
-                    <div id="loginStatus" class="alert d-none status-msg" role="alert"></div>
+                    <div id="loginStatus" class="alert d-none mt-3 fw-bold small text-center" role="alert"></div>
                 </form>
             </div>
         </div>
@@ -120,41 +56,26 @@
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Sayfanın kendi kendine yenilenmesini engelliyoruz
-
-            const emailInput = document.getElementById('email').value.trim();
-            const passwordInput = document.getElementById('password').value;
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
             const statusBox = document.getElementById('loginStatus');
 
-            // 1. ADIM: Mail formatını kontrol et (.ogr@sakarya.edu.tr)
-            if (emailInput.toLowerCase().endsWith("@ogr.sakarya.edu.tr")) {
-                
-                // 2. ADIM: Şifre boş mu veya çok mu kısa? (Basit bir kural)
-                if (passwordInput.length >= 4) {
-                    
-                    // BAŞARILI DURUM: Mesajı göster ve yönlendir
-                    statusBox.textContent = "Giriş başarılı! Bilgileriniz doğrulandı, yönlendiriliyorsunuz...";
-                    statusBox.className = "alert alert-success d-block status-msg fw-bold";
-                    
-                    // 1.5 saniye sonra index.html sayfasına ışınlıyoruz
-                    setTimeout(function() {
-                        window.location.href = "index.html";
-                    }, 1500);
+            // 1. ADIM: Boş alan kontrolü
+            if (email === "" || password === "") {
+                event.preventDefault();
+                statusBox.textContent = "Hata: Alanlar boş bırakılamaz!";
+                statusBox.className = "alert alert-danger d-block";
+                return;
+            }
 
-                } else {
-                    // ŞİFRE HATASI
-                    statusBox.textContent = "Hata: Şifre alanı boş bırakılamaz (Min. 4 karakter).";
-                    statusBox.className = "alert alert-danger d-block status-msg fw-bold";
-                }
-
-            } else {
-                // MAİL HATASI
-                statusBox.textContent = "Hata: Lütfen geçerli bir '.ogr@sakarya.edu.tr' uzantılı öğrenci maili giriniz.";
-                statusBox.className = "alert alert-danger d-block status-msg fw-bold";
+            // 2. ADIM: Mail formatı kontrolü (Ödev dökümanına göre)
+            if (!email.toLowerCase().endsWith("@sakarya.edu.tr")) {
+                event.preventDefault();
+                statusBox.textContent = "Hata: @sakarya.edu.tr uzantılı mail girmelisiniz!";
+                statusBox.className = "alert alert-danger d-block";
+                return;
             }
         });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
